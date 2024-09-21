@@ -3,9 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-- Planned create Bakeryitem.
-- Planned get detain of bakery item.
-- Planned Remove bakery item if expired
+- Planned list of available products & search them
+- Planned Place an Order and get the bill
+- Planned See order history
+
+
+
+
+
+##[1.3.0]
+## Added
+- create Bakeryitem vie and models
+- get detain of bakery item
+
+## Removed 
+- Kitchen models
+- reused kitchen app for bakery
 
 
 ## [1.2.0]
