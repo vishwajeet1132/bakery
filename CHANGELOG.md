@@ -3,12 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-- Planned list of available products & search them
-- Planned Place an Order and get the bill
-- Planned See order history
 
 
 
+##[1.4.0]
+## Added
+- list of available products 
+- Place an Order and get the bill
+- See order history
 
 
 ##[1.3.0]
