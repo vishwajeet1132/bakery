@@ -8,6 +8,7 @@ from .serializers import InventorySerializer
 from datetime import date
 from rest_framework.permissions import IsAuthenticated
 from users.permissions import IsAdmin
+from rest_framework.pagination import PageNumberPagination
 
 
 class AddItemView(APIView):
@@ -85,6 +86,7 @@ class RemoveItemView(APIView):
 
 class ListItemsView(APIView):
     permission_classes = [IsAuthenticated,IsAdmin]
+    pagination_class = PageNumberPagination
 
     def get(self, request):
         try:
@@ -97,6 +99,7 @@ class ListItemsView(APIView):
 
 class ListExpiredItemsView(APIView):
     permission_classes = [IsAuthenticated,IsAdmin]
+    pagination_class = PageNumberPagination
     def get(self, request):
         try:
             expired_items = Inventory.objects.filter(expiry__lt=date.today()).order_by('expiry')

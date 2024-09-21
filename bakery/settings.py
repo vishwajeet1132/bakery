@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'Inventory',
     'Kitchen',
-    'users'
+    'users',
+    'customers',
 ]
 
 MIDDLEWARE = [
@@ -134,9 +135,10 @@ REST_FRAMEWORK = {
 
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-'DEFAULT_PERMISSION_CLASSES': (
+    'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',  # Restrict access by default
     ),
+
 }
 
 SIMPLE_JWT = {
