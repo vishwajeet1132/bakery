@@ -3,8 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-- Planned User registeration.
-- Planned authorization.
+- Planned create Bakeryitem.
+- Planned get detain of bakery item.
+- Planned Remove bakery item if expired
+
+
+## [1.2.0]
+### Added
+- User registration
+- Admin/Customer role based authorization 
+
 
 
 

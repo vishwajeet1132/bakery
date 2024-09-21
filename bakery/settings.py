@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1']
 
 
+AUTH_USER_MODEL = 'users.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'Inventory',
     'Kitchen',
+    'users'
 ]
 
 MIDDLEWARE = [
