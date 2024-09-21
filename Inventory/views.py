@@ -7,10 +7,11 @@ from .models import Inventory
 from .serializers import InventorySerializer
 from datetime import date
 from rest_framework.permissions import IsAuthenticated
+from users.permissions import IsAdmin
 
 
 class AddItemView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,IsAdmin]
     def post(self, request):
         try:
             name = request.data.get('name')
@@ -48,7 +49,7 @@ class AddItemView(APIView):
 
 
 class RemoveItemView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,IsAdmin]
     def post(self, request):
         try:
             name = request.data.get('name')
@@ -83,7 +84,7 @@ class RemoveItemView(APIView):
 
 
 class ListItemsView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,IsAdmin]
 
     def get(self, request):
         try:
@@ -95,7 +96,7 @@ class ListItemsView(APIView):
 
 
 class ListExpiredItemsView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated,IsAdmin]
     def get(self, request):
         try:
             expired_items = Inventory.objects.filter(expiry__lt=date.today()).order_by('expiry')
